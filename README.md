@@ -1,96 +1,55 @@
-# 💝 Valentine's Day Proposal Website
+# No-Escape Valentine (PHP + JSON)
 
-A fun and interactive Valentine's Day website where there's only ONE possible answer... YES! 💕
+A tiny, **GitHub-ready** PHP project that generates shareable Valentine links.
 
-## ✨ Features
+- Create a link by entering a name
+- Shares a page like: `p.php?id=...`
+- “No” button dodges your cursor/taps 😈
+- Stores proposals + click counts in `storage/with.json`
 
-- **Interactive Question**: Asks "Will You Be My Valentine?"
-- **Only Yes Works**: The "No" button is disabled - there's only one correct answer! 😊
-- **Beautiful Celebration**: When "Yes" is clicked, enjoy:
-  - 🎊 Confetti explosion
-  - 💕 Floating hearts animation
-  - 🎉 Celebration message
-  - 🎨 Beautiful gradient background
+> Friendly reminder: keep it playful — don’t use it to pressure anyone.
 
-## 🚀 Live Demo
+## Project structure
 
-Simply open the `valentine.html` file in any web browser!
-
-## 📦 Installation
-
-1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/valentine-proposal.git
+```
+noescape-valentine-php/
+  assets/
+    app.css
+    app.js
+  src/
+    helpers.php
+  storage/
+    with.json
+    .htaccess
+  index.php
+  create.php
+  p.php
+  respond.php
+  result.php
 ```
 
-2. Navigate to the project directory:
+## Setup (local)
+
+### Option A: PHP built-in server
+
 ```bash
-cd valentine-proposal
+cd noescape-valentine-php
+php -S localhost:8000
 ```
+Open: `http://localhost:8000`
 
-3. Open `valentine.html` in your browser:
-```bash
-# On Mac
-open valentine.html
+### Option B: Shared hosting (cPanel)
 
-# On Linux
-xdg-open valentine.html
+1. Upload the folder contents to your domain (or a subfolder).
+2. Ensure `storage/` is **writable** by PHP.
+   - If it’s not, set permissions (often `755` for folder, `644` for file; some hosts need `775`).
+3. If your host uses Apache, the included `storage/.htaccess` blocks public access to the JSON file.
 
-# On Windows
-start valentine.html
-```
+## Notes
 
-Or simply double-click the `valentine.html` file!
+- This uses simple JSON storage (no database). On very high traffic, you’d likely switch to SQLite/MySQL.
+- If you deploy behind Nginx, block `/storage/` via server config (since `.htaccess` won’t apply).
 
-## 💻 Usage
+## License
 
-1. Open the website
-2. See the question "Will You Be My Valentine?"
-3. Notice the "No" button is disabled (with a 🚫 symbol)
-4. Click "Yes!" to see the magical celebration!
-
-## 🎨 Customization
-
-You can easily customize:
-- **Colors**: Modify the gradient backgrounds in the CSS
-- **Message**: Change the celebration message text
-- **Hearts**: Adjust the floating hearts and confetti colors
-- **GIF**: Replace the celebration GIF URL with your own
-
-## 🛠️ Technologies Used
-
-- HTML5
-- CSS3 (Animations, Gradients, Flexbox)
-- Vanilla JavaScript (No dependencies!)
-
-## 📱 Responsive Design
-
-Works perfectly on:
-- 💻 Desktop browsers
-- 📱 Mobile devices
-- 📲 Tablets
-
-## 🤝 Contributing
-
-Feel free to fork this project and make it your own! Some ideas:
-- Add sound effects
-- Include more celebration animations
-- Add personalized photos
-- Create different themes
-
-## 📄 License
-
-Free to use for personal romantic purposes! 💕
-
-## 💌 Perfect For
-
-- Valentine's Day proposals
-- Anniversary surprises
-- Romantic gestures
-- Just-because moments
-
----
-
-Made with ❤️ for someone special
-
-**Note**: This is a fun project where the "No" option is intentionally disabled. Use responsibly and make sure your special someone has a sense of humor! 😊
+MIT — do whatever you like.
