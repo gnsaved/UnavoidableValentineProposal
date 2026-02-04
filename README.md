@@ -16,6 +16,10 @@ noescape-valentine-php/
   assets/
     app.css
     app.js
+    ChooseYesorNo(NoRunninAway)Screenshot.png
+    ChooseYesorNoScreenshot.png
+    EnterLoverNameToGenerateLinkScreenshot.png
+    ResultScreenshot.png
   src/
     helpers.php
   storage/
