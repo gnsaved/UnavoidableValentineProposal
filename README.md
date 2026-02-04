@@ -20,6 +20,7 @@ noescape-valentine-php/
     ChooseYesorNoScreenshot.png
     EnterLoverNameToGenerateLinkScreenshot.png
     ResultScreenshot.png
+    VideoOfRunningNo.mp4
   src/
     helpers.php
   storage/
